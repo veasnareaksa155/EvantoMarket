@@ -27,9 +27,9 @@
   <body>
     <!-- Top Announcement Bar -->
     <header class="top-ticker-bar">
-      <div class="container">
+      <div class="container-fluid px-3 px-lg-4 px-xl-5">
         <div class="row align-items-center text-center text-lg-start g-2">
-          <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-start gap-2">
+          <div class="col-12 col-lg-4 d-none d-lg-flex align-items-center justify-content-start gap-2">
             <img
               src="image/download.jpg"
               alt="Envanto Partner"
@@ -49,11 +49,11 @@
               <a href="#" class="code-badge ms-1" data-copy-code="XTRA20" title="Click to copy promo code">
                 XTRA20 <i class="bi bi-copy ms-1 small"></i>
               </a>
-              • Free Global Express Delivery
+              • Free Express Delivery
             </p>
           </div>
 
-          <div class="col-12 col-lg-3 text-center text-lg-end">
+          <div class="col-12 col-lg-3 text-center text-lg-end d-none d-lg-block">
             <a
               href="https://themeforest.net"
               target="_blank"
@@ -69,7 +69,7 @@
 
     <!-- Main Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-luxury">
-      <div class="container">
+      <div class="container-fluid px-3 px-lg-4 px-xl-5">
         <!-- Brand -->
         <a href="index.html" class="navbar-brand d-flex align-items-center gap-2">
           <div class="brand-monogram">
@@ -79,6 +79,33 @@
             XTRA<span>Watch</span>
           </div>
         </a>
+
+        <!-- Mobile Header Quick Actions (Wishlist & Cart accessible with 1 tap on phones) -->
+        <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
+          <button
+            type="button"
+            class="nav-action-btn"
+            title="Wishlist"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#wishlistDrawer"
+            aria-label="Wishlist"
+          >
+            <i class="bi bi-heart"></i>
+            <span class="nav-action-badge wishlist-badge-count">1</span>
+          </button>
+
+          <button
+            type="button"
+            class="nav-action-btn"
+            title="Cart"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#cartDrawer"
+            aria-label="Cart"
+          >
+            <i class="bx bx-shopping-bag fs-5"></i>
+            <span class="nav-action-badge cart-badge-count">2</span>
+          </button>
+        </div>
 
         <!-- Mobile Toggler -->
         <button
@@ -210,25 +237,25 @@
               </li>
             </ul>
 
-            <!-- Right Nav Actions -->
-            <div class="d-flex align-items-center justify-content-center justify-content-lg-end gap-2 mt-3 mt-lg-0">
-              <!-- Wishlist Trigger -->
+            <!-- Right Nav Actions (Desktop Buttons & Drawer Action) -->
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-end gap-2 mt-3 mt-lg-0 w-100 w-lg-auto">
+              <!-- Desktop Wishlist Trigger -->
               <button
                 type="button"
-                class="nav-action-btn"
+                class="nav-action-btn d-none d-lg-inline-flex"
                 title="Wishlist"
                 data-bs-toggle="offcanvas"
-                data-bs-target="#cartDrawer"
+                data-bs-target="#wishlistDrawer"
                 aria-label="Wishlist"
               >
                 <i class="bi bi-heart"></i>
                 <span class="nav-action-badge wishlist-badge-count">1</span>
               </button>
 
-              <!-- Cart Trigger -->
+              <!-- Desktop Cart Trigger -->
               <button
                 type="button"
-                class="nav-action-btn"
+                class="nav-action-btn d-none d-lg-inline-flex"
                 title="Cart"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#cartDrawer"
@@ -240,7 +267,7 @@
 
               <a
                 href="commponent/custom.html"
-                class="btn-luxury-dark btn-luxury-sm ms-lg-2 d-none d-sm-inline-flex"
+                class="btn-luxury-dark btn-luxury-sm w-100 w-lg-auto text-center"
               >
                 <i class="bi bi-sliders me-1"></i> Build Custom
               </a>
@@ -253,7 +280,7 @@
     <!-- Hero Section -->
     <section class="hero-wrapper">
       <div class="container">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-4 g-lg-5">
           <!-- Hero Left Content -->
           <div class="col-12 col-lg-6 text-center text-lg-start">
             <div class="hero-tag">
@@ -269,24 +296,24 @@
               Aerospace Grade-5 Titanium, Sapphire Crystal Lens, Ultra-HD AMOLED retina display, and clinical-grade biometric telemetry crafted for discerning lifestyles.
             </p>
 
-            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-4">
-              <a href="commponent/watch.html" class="btn-luxury-primary">
-                Explore Collection <i class="bi bi-arrow-right"></i>
+            <div class="hero-cta-group mb-4">
+              <a href="commponent/watch.html" class="btn-luxury-primary hero-btn">
+                Explore Collection <i class="bi bi-arrow-right ms-1"></i>
               </a>
-              <a href="commponent/custom.html" class="btn-luxury-outline">
-                <i class="bi bi-sliders"></i> Bespoke Studio
+              <a href="commponent/custom.html" class="btn-luxury-outline hero-btn">
+                <i class="bi bi-sliders me-1"></i> Bespoke Studio
               </a>
             </div>
 
             <!-- Mini Spec Pills in Hero -->
-            <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start pt-2">
-              <span class="badge-luxury badge-luxury-cyan">
+            <div class="hero-specs-row pt-2">
+              <span class="hero-spec-pill pill-cyan">
                 <i class="bi bi-battery-charging"></i> 7-Day Battery
               </span>
-              <span class="badge-luxury badge-luxury-emerald">
+              <span class="hero-spec-pill pill-emerald">
                 <i class="bi bi-droplet-half"></i> 50M 5ATM Waterproof
               </span>
-              <span class="badge-luxury badge-luxury-gold">
+              <span class="hero-spec-pill pill-gold">
                 <i class="bi bi-heart-pulse"></i> 24/7 ECG & SpO2
               </span>
             </div>
@@ -297,19 +324,19 @@
             <div class="hero-product-showcase">
               <div class="hero-glow-backdrop"></div>
 
-              <!-- Floating Spec Pill Top Right -->
-              <div class="hero-floating-pill pill-top-right">
-                <div class="brand-monogram" style="width: 38px; height: 38px; font-size: 1.1rem; background: var(--color-primary);">
+              <!-- Floating Spec Pill Top Right (Desktop Only) -->
+              <div class="hero-floating-pill pill-top-right d-none d-lg-flex">
+                <div class="brand-monogram" style="width: 38px; height: 38px; font-size: 1.1rem; background: var(--color-primary); flex-shrink: 0;">
                   <i class="bi bi-cpu-fill"></i>
                 </div>
                 <div>
-                  <div class="fw-bold small text-dark">Dual-Core 60 FPS</div>
-                  <div class="small text-muted" style="font-size: 0.75rem;">Instant Fluid Touch</div>
+                  <div class="fw-bold small text-dark" style="line-height: 1.2;">Dual-Core 60 FPS</div>
+                  <div class="small text-muted" style="font-size: 0.72rem; line-height: 1.2;">Instant Fluid Touch</div>
                 </div>
               </div>
 
               <!-- Main Hero Watch Image Carousel -->
-              <div id="heroWatchSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+              <div id="heroWatchSlider" class="carousel slide carousel-fade hero-watch-slider" data-bs-ride="carousel" data-bs-interval="4000">
                 <div class="carousel-inner text-center">
                   <div class="carousel-item active">
                     <img
@@ -334,23 +361,30 @@
                   </div>
                 </div>
 
-                <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#heroWatchSlider" data-bs-slide="prev" aria-label="Previous">
-                  <span class="carousel-control-prev-icon p-2 bg-dark rounded-circle" aria-hidden="true"></span>
+                <!-- Carousel Controls (Sleek Glass Round Arrow Buttons) -->
+                <button class="hero-carousel-arrow hero-arrow-prev" type="button" data-bs-target="#heroWatchSlider" data-bs-slide="prev" aria-label="Previous">
+                  <i class="bi bi-chevron-left"></i>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#heroWatchSlider" data-bs-slide="next" aria-label="Next">
-                  <span class="carousel-control-next-icon p-2 bg-dark rounded-circle" aria-hidden="true"></span>
+                <button class="hero-carousel-arrow hero-arrow-next" type="button" data-bs-target="#heroWatchSlider" data-bs-slide="next" aria-label="Next">
+                  <i class="bi bi-chevron-right"></i>
                 </button>
+
+                <!-- Carousel Indicators (Pill Dots) -->
+                <div class="carousel-indicators hero-carousel-indicators">
+                  <button type="button" data-bs-target="#heroWatchSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#heroWatchSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#heroWatchSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
               </div>
 
-              <!-- Floating Spec Pill Bottom Left -->
-              <div class="hero-floating-pill pill-bottom-left">
-                <div class="brand-monogram" style="width: 38px; height: 38px; font-size: 1.1rem; background: var(--color-emerald);">
+              <!-- Floating Spec Pill Bottom Left (Desktop Only) -->
+              <div class="hero-floating-pill pill-bottom-left d-none d-lg-flex">
+                <div class="brand-monogram" style="width: 38px; height: 38px; font-size: 1.1rem; background: var(--color-emerald); flex-shrink: 0;">
                   <i class="bi bi-shield-check"></i>
                 </div>
                 <div>
-                  <div class="fw-bold small text-dark">Titanium & Sapphire</div>
-                  <div class="small text-muted" style="font-size: 0.75rem;">Scratchproof Lens</div>
+                  <div class="fw-bold small text-dark" style="line-height: 1.2;">Titanium & Sapphire</div>
+                  <div class="small text-muted" style="font-size: 0.72rem; line-height: 1.2;">Scratchproof Lens</div>
                 </div>
               </div>
             </div>
@@ -415,8 +449,8 @@
     </section>
 
     <!-- Bento Grid / Engineering Highlights -->
-    <section class="container py-5 my-3">
-      <div class="text-center mb-5">
+    <section class="container py-4 py-lg-5 my-2 my-lg-3">
+      <div class="text-center mb-4 mb-lg-5">
         <span class="badge-luxury badge-luxury-cyan mb-2">PRECISION HOROLOGY</span>
         <h2 class="display-6 fw-bold">Mastery In Every Millimeter</h2>
         <p class="text-muted mx-auto" style="max-width: 620px;">
@@ -424,67 +458,75 @@
         </p>
       </div>
 
-      <div class="row g-4 align-items-stretch">
+      <div class="row g-2 g-lg-4 align-items-stretch">
         <!-- Left Column -->
-        <div class="col-12 col-lg-4 d-flex flex-column gap-4">
-          <div class="bento-card">
+        <div class="col-12 col-lg-4 d-flex flex-column gap-2 gap-lg-4">
+          <div class="bento-card bento-feature-card">
             <div class="bento-icon icon-cyan">
               <i class="bi bi-speedometer2"></i>
             </div>
-            <h4 class="fw-bold mb-2">Dual-Core Performance</h4>
-            <p class="text-muted small mb-0">
-              60 FPS ultra-smooth capacitive touch transitions with instant haptic response powered by our custom low-energy microchip.
-            </p>
+            <div class="bento-card-body">
+              <h4 class="bento-title fw-bold mb-1">Dual-Core Performance</h4>
+              <p class="bento-desc text-muted small mb-0">
+                60 FPS ultra-smooth capacitive touch transitions with instant haptic response powered by our custom low-energy microchip.
+              </p>
+            </div>
           </div>
 
-          <div class="bento-card">
+          <div class="bento-card bento-feature-card">
             <div class="bento-icon icon-gold">
               <i class="bi bi-battery-charging"></i>
             </div>
-            <h4 class="fw-bold mb-2">7-Day Extended Battery</h4>
-            <p class="text-muted small mb-0">
-              Ultra-efficient high-density battery cell with proprietary fast magnetic dock charging reaching 80% power in 35 minutes.
-            </p>
+            <div class="bento-card-body">
+              <h4 class="bento-title fw-bold mb-1">7-Day Extended Battery</h4>
+              <p class="bento-desc text-muted small mb-0">
+                Ultra-efficient high-density battery cell with proprietary fast magnetic dock charging reaching 80% power in 35 minutes.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- Center Showcase -->
         <div class="col-12 col-lg-4">
           <div class="center-showcase-box shadow-sm">
-            <span class="badge bg-dark text-white rounded-pill px-3 py-1 small mb-3">SAPPHIRE EDITION</span>
+            <span class="badge bg-dark text-white rounded-pill px-3 py-1 small mb-2 mb-lg-3">SAPPHIRE EDITION</span>
             <img
               src="image/img.jpg"
               alt="XTRA Watch Engineering Centerpiece"
-              class="img-fluid rounded-4 shadow mb-4"
+              class="img-fluid rounded-4 shadow mb-3 mb-lg-4"
               style="max-height: 280px; object-fit: cover;"
             />
-            <h4 class="fw-bold mb-1">Grade 5 Titanium Armor</h4>
-            <p class="text-muted small mb-0">
+            <h4 class="center-showcase-title fw-bold mb-1">Grade 5 Titanium Armor</h4>
+            <p class="center-showcase-desc text-muted small mb-0">
               Forged with aerospace alloy providing twice the hardness of standard stainless steel at nearly half the wrist weight.
             </p>
           </div>
         </div>
 
         <!-- Right Column -->
-        <div class="col-12 col-lg-4 d-flex flex-column gap-4">
-          <div class="bento-card">
+        <div class="col-12 col-lg-4 d-flex flex-column gap-2 gap-lg-4">
+          <div class="bento-card bento-feature-card">
             <div class="bento-icon icon-rose">
               <i class="bi bi-heart-pulse-fill"></i>
             </div>
-            <h4 class="fw-bold mb-2">Continuous Biometrics</h4>
-            <p class="text-muted small mb-0">
-              Clinical-grade PPG optical sensor array delivering 24/7 heart rate telemetry, SpO2 blood oxygen, and automated sleep stage tracking.
-            </p>
+            <div class="bento-card-body">
+              <h4 class="bento-title fw-bold mb-1">Continuous Biometrics</h4>
+              <p class="bento-desc text-muted small mb-0">
+                Clinical-grade PPG optical sensor array delivering 24/7 heart rate telemetry, SpO2 blood oxygen, and automated sleep stage tracking.
+              </p>
+            </div>
           </div>
 
-          <div class="bento-card">
+          <div class="bento-card bento-feature-card">
             <div class="bento-icon icon-emerald">
               <i class="bi bi-droplet-half"></i>
             </div>
-            <h4 class="fw-bold mb-2">50M 5ATM Water Resistance</h4>
-            <p class="text-muted small mb-0">
-              Precision acoustic water-expelling speaker cavity engineered for open ocean swimming, triathlons, and wet outdoor adventures.
-            </p>
+            <div class="bento-card-body">
+              <h4 class="bento-title fw-bold mb-1">50M 5ATM Water Resistance</h4>
+              <p class="bento-desc text-muted small mb-0">
+                Precision acoustic water-expelling speaker cavity engineered for open ocean swimming, triathlons, and wet outdoor adventures.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -503,30 +545,30 @@
             <i class="bi bi-gem"></i> Next-Gen Flagship Timepiece
           </span>
           <h2>Gadget XTRA Smartwatch Edition</h2>
-          <p class="lead opacity-90 mx-auto" style="max-width: 700px;">
+          <p class="lead text-white mx-auto" style="max-width: 700px;">
             A wearable technological marvel seamlessly uniting timeless Swiss horology aesthetic with state-of-the-art telemetry and connected notifications.
           </p>
 
           <div class="feature-glass-grid">
             <div class="feature-glass-box">
               <i class="bi bi-droplet-half text-info"></i>
-              <h6 class="fw-bold mb-1">5ATM Waterproof</h6>
-              <small class="opacity-75">50m ISO 22810 Rated</small>
+              <h6 class="fw-bold mb-1 text-white">5ATM Waterproof</h6>
+              <small class="text-white-50">50m ISO 22810 Rated</small>
             </div>
             <div class="feature-glass-box">
               <i class="bi bi-battery-charging text-success"></i>
-              <h6 class="fw-bold mb-1">168h Endurance</h6>
-              <small class="opacity-75">7-Day Standby Life</small>
+              <h6 class="fw-bold mb-1 text-white">168h Endurance</h6>
+              <small class="text-white-50">7-Day Standby Life</small>
             </div>
             <div class="feature-glass-box">
               <i class="bi bi-activity text-warning"></i>
-              <h6 class="fw-bold mb-1">Optical ECG</h6>
-              <small class="opacity-75">BioTracker 4.0 PPG</small>
+              <h6 class="fw-bold mb-1 text-white">Optical ECG</h6>
+              <small class="text-white-50">BioTracker 4.0 PPG</small>
             </div>
             <div class="feature-glass-box">
               <i class="bi bi-phone text-primary"></i>
-              <h6 class="fw-bold mb-1">iOS & Android</h6>
-              <small class="opacity-75">Bluetooth 5.3 LE</small>
+              <h6 class="fw-bold mb-1 text-white">iOS & Android</h6>
+              <small class="text-white-50">Bluetooth 5.3 LE</small>
             </div>
           </div>
         </div>
@@ -548,9 +590,9 @@
         </div>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-2 g-md-4">
         <!-- Product 1: Chrome Watch Pro -->
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-6 col-lg-3">
           <div class="product-card" data-product-card data-product-title="Chrome Watch Pro" data-product-category="Smart Tech">
             <div class="product-media-wrapper">
               <div class="product-badge-overlay">
@@ -628,7 +670,7 @@
         </div>
 
         <!-- Product 2: Classic Edition Watch -->
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-6 col-lg-3">
           <div class="product-card" data-product-card data-product-title="Classic Edition Watch" data-product-category="Heritage Classic">
             <div class="product-media-wrapper">
               <div class="product-badge-overlay">
@@ -706,7 +748,7 @@
         </div>
 
         <!-- Product 3: Gold Prestige Smartwatch -->
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-6 col-lg-3">
           <div class="product-card" data-product-card data-product-title="Gold Prestige Smartwatch" data-product-category="Luxury Gold">
             <div class="product-media-wrapper">
               <div class="product-badge-overlay">
@@ -784,7 +826,7 @@
         </div>
 
         <!-- Product 4: Stealth Black Sports -->
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-6 col-lg-3">
           <div class="product-card" data-product-card data-product-title="Stealth Black Sports" data-product-category="Sport Chrono">
             <div class="product-media-wrapper">
               <div class="product-badge-overlay">
@@ -931,7 +973,7 @@
 
     <!-- Testimonials Section -->
     <section class="container py-5">
-      <div class="row align-items-center g-5">
+      <div class="row align-items-center g-4 g-lg-5">
         <div class="col-12 col-lg-6">
           <span class="badge-luxury badge-luxury-cyan mb-2">VERIFIED OWNERS</span>
           <h2 class="display-6 fw-bold mb-4">Adored by Explorers & Athletes</h2>
@@ -1083,7 +1125,7 @@
     <!-- Footer -->
     <footer class="footer-luxury">
       <div class="container">
-        <div class="row g-5 mb-5">
+        <div class="row g-4 g-lg-5 mb-5">
           <div class="col-12 col-lg-4">
             <div class="d-flex align-items-center gap-2 mb-3">
               <div class="brand-monogram" style="width: 38px; height: 38px; font-size: 1.2rem;">
@@ -1091,7 +1133,7 @@
               </div>
               <h5 class="m-0 fw-bold text-white fs-4">XTRA<span class="text-primary">Watch</span></h5>
             </div>
-            <p class="small text-muted mb-4" style="max-width: 340px;">
+            <p class="footer-brand-desc mb-4" style="max-width: 340px;">
               Pioneering wearable horology where aerospace-grade metallurgy unites with continuous biometric health telemetry and contemporary luxury aesthetics.
             </p>
             <div class="d-flex gap-2">
@@ -1126,7 +1168,7 @@
 
           <div class="col-12 col-md-6 col-lg-4">
             <h6 class="footer-title">Join The VIP Horology Club</h6>
-            <p class="small text-muted mb-3">
+            <p class="footer-newsletter-desc mb-3">
               Subscribe to unlock private drops, horology newsletters, and an instant 15% VIP welcome voucher.
             </p>
             <form class="newsletter-form">
@@ -1142,7 +1184,7 @@
                 </button>
               </div>
             </form>
-            <div class="mt-3 small text-muted">
+            <div class="mt-3 small newsletter-note">
               <i class="bi bi-shield-check text-success me-1"></i> No spam. Unsubscribe anytime with 1 click.
             </div>
           </div>
@@ -1251,6 +1293,57 @@
           class="btn-luxury-primary w-100 py-3 mt-3 fs-6"
         >
           <i class="bi bi-shield-check"></i> Proceed to Secure Checkout
+        </button>
+      </div>
+    </div>
+
+    <!-- Slide-Over Wishlist Drawer -->
+    <div
+      class="offcanvas offcanvas-end wishlist-offcanvas"
+      tabindex="-1"
+      id="wishlistDrawer"
+      aria-labelledby="wishlistDrawerLabel"
+    >
+      <div class="cart-header">
+        <h5 class="fw-bold mb-0 d-flex align-items-center gap-2" id="wishlistDrawerLabel">
+          <i class="bi bi-heart-fill text-danger fs-5"></i>
+          My Saved Wishlist (<span id="wishlistHeaderCount">1</span>)
+        </h5>
+        <button
+          type="button"
+          class="btn-close shadow-none"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="cart-body">
+        <!-- Empty State -->
+        <div id="wishlistEmptyState" class="text-center py-5" style="display: none;">
+          <i class="bi bi-heart fs-1 text-muted mb-3 d-block opacity-50"></i>
+          <h5 class="fw-bold">Your wishlist is empty</h5>
+          <p class="text-muted small mb-4">Click the heart icon on any timepiece to save it here for later.</p>
+          <a href="commponent/watch.html" class="btn-luxury-primary btn-luxury-sm">Browse Collection</a>
+        </div>
+
+        <!-- Wishlist Items List Container (Rendered dynamically) -->
+        <div id="wishlistItemsList"></div>
+      </div>
+
+      <div id="wishlistFooterContainer" class="cart-footer">
+        <button
+          type="button"
+          id="addAllWishlistToCartBtn"
+          class="btn-luxury-primary w-100 py-3 mb-2 fs-6"
+        >
+          <i class="bi bi-bag-plus-fill me-1"></i> Add All Items to Cart
+        </button>
+        <button
+          type="button"
+          id="clearWishlistBtn"
+          class="btn btn-outline-secondary w-100 rounded-pill py-2 small fw-semibold"
+        >
+          Clear Wishlist
         </button>
       </div>
     </div>

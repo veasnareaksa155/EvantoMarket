@@ -27,9 +27,9 @@
   <body>
     <!-- Top Announcement Bar -->
     <header class="top-ticker-bar">
-      <div class="container">
+      <div class="container-fluid px-3 px-lg-4 px-xl-5">
         <div class="row align-items-center text-center text-lg-start g-2">
-          <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-start gap-2">
+          <div class="col-12 col-lg-4 d-none d-lg-flex align-items-center justify-content-center justify-content-lg-start gap-2">
             <img
               src="../image/download.jpg"
               alt="Envanto Partner"
@@ -53,7 +53,7 @@
             </p>
           </div>
 
-          <div class="col-12 col-lg-3 text-center text-lg-end">
+          <div class="col-12 col-lg-3 d-none d-lg-block text-center text-lg-end">
             <a
               href="https://themeforest.net"
               target="_blank"
@@ -69,7 +69,7 @@
 
     <!-- Main Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-luxury">
-      <div class="container">
+      <div class="container-fluid px-3 px-lg-4 px-xl-5">
         <!-- Brand -->
         <a href="../index.html" class="navbar-brand d-flex align-items-center gap-2">
           <div class="brand-monogram">
@@ -79,6 +79,33 @@
             XTRA<span>Watch</span>
           </div>
         </a>
+
+        <!-- Mobile Header Quick Actions (Wishlist & Cart accessible with 1 tap on phones) -->
+        <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
+          <button
+            type="button"
+            class="nav-action-btn"
+            title="Wishlist"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#wishlistDrawer"
+            aria-label="Wishlist"
+          >
+            <i class="bi bi-heart"></i>
+            <span class="nav-action-badge wishlist-badge-count">1</span>
+          </button>
+
+          <button
+            type="button"
+            class="nav-action-btn"
+            title="Cart"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#cartDrawer"
+            aria-label="Cart"
+          >
+            <i class="bx bx-shopping-bag fs-5"></i>
+            <span class="nav-action-badge cart-badge-count">2</span>
+          </button>
+        </div>
 
         <!-- Mobile Toggler -->
         <button
@@ -214,10 +241,10 @@
             <div class="d-flex align-items-center justify-content-center justify-content-lg-end gap-2 mt-3 mt-lg-0">
               <button
                 type="button"
-                class="nav-action-btn"
+                class="nav-action-btn d-none d-lg-inline-flex"
                 title="Wishlist"
                 data-bs-toggle="offcanvas"
-                data-bs-target="#cartDrawer"
+                data-bs-target="#wishlistDrawer"
                 aria-label="Wishlist"
               >
                 <i class="bi bi-heart"></i>
@@ -226,7 +253,7 @@
 
               <button
                 type="button"
-                class="nav-action-btn"
+                class="nav-action-btn d-none d-lg-inline-flex"
                 title="Cart"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#cartDrawer"
@@ -238,7 +265,7 @@
 
               <a
                 href="custom.html"
-                class="btn-luxury-dark btn-luxury-sm ms-lg-2 d-none d-sm-inline-flex"
+                class="btn-luxury-dark btn-luxury-sm ms-lg-2 w-100 w-lg-auto text-center justify-content-center"
               >
                 <i class="bi bi-sliders me-1"></i> Build Custom
               </a>
@@ -288,9 +315,9 @@
 
     <!-- Product Showcase Grid -->
     <main class="container py-5">
-      <div class="row g-4 justify-content-center">
+      <div class="row g-2 g-md-4 justify-content-center">
         <!-- Item 1: Classic Edition Watch -->
-        <div class="col-12 col-sm-6 col-lg-4">
+        <div class="col-6 col-lg-4">
           <div class="product-card" data-product-card data-product-title="Classic Edition Watch" data-product-category="Heritage Classic">
             <div class="product-media-wrapper">
               <div class="product-badge-overlay">
@@ -368,7 +395,7 @@
         </div>
 
         <!-- Item 2: Gold Prestige Smartwatch -->
-        <div class="col-12 col-sm-6 col-lg-4">
+        <div class="col-6 col-lg-4">
           <div class="product-card" data-product-card data-product-title="Gold Prestige Smartwatch" data-product-category="Luxury Gold">
             <div class="product-media-wrapper">
               <div class="product-badge-overlay">
@@ -450,7 +477,7 @@
     <!-- Footer -->
     <footer class="footer-luxury">
       <div class="container">
-        <div class="row g-5 mb-5">
+        <div class="row g-4 g-lg-5 mb-5">
           <div class="col-12 col-lg-4">
             <div class="d-flex align-items-center gap-2 mb-3">
               <div class="brand-monogram" style="width: 38px; height: 38px; font-size: 1.2rem;">
@@ -458,7 +485,7 @@
               </div>
               <h5 class="m-0 fw-bold text-white fs-4">XTRA<span class="text-primary">Watch</span></h5>
             </div>
-            <p class="small text-muted mb-4" style="max-width: 340px;">
+            <p class="footer-brand-desc mb-4" style="max-width: 340px;">
               Pioneering wearable horology where aerospace-grade metallurgy unites with continuous biometric health telemetry and contemporary luxury aesthetics.
             </p>
           </div>
@@ -486,6 +513,9 @@
 
           <div class="col-12 col-md-6 col-lg-4">
             <h6 class="footer-title">Join The VIP Horology Club</h6>
+            <p class="footer-newsletter-desc mb-3">
+              Subscribe to unlock private drops, horology newsletters, and an instant 15% VIP welcome voucher.
+            </p>
             <form class="newsletter-form">
               <div class="newsletter-input-group">
                 <input
@@ -499,6 +529,9 @@
                 </button>
               </div>
             </form>
+            <div class="mt-3 small newsletter-note">
+              <i class="bi bi-shield-check text-success me-1"></i> No spam. Unsubscribe anytime with 1 click.
+            </div>
           </div>
         </div>
 
@@ -574,6 +607,57 @@
 
         <button type="button" id="proceedCheckoutBtn" class="btn-luxury-primary w-100 py-3 mt-3 fs-6">
           <i class="bi bi-shield-check"></i> Proceed to Secure Checkout
+        </button>
+      </div>
+    </div>
+
+    <!-- Slide-Over Wishlist Drawer -->
+    <div
+      class="offcanvas offcanvas-end wishlist-offcanvas"
+      tabindex="-1"
+      id="wishlistDrawer"
+      aria-labelledby="wishlistDrawerLabel"
+    >
+      <div class="cart-header">
+        <h5 class="fw-bold mb-0 d-flex align-items-center gap-2" id="wishlistDrawerLabel">
+          <i class="bi bi-heart-fill text-danger fs-5"></i>
+          My Saved Wishlist (<span id="wishlistHeaderCount">1</span>)
+        </h5>
+        <button
+          type="button"
+          class="btn-close shadow-none"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="cart-body">
+        <!-- Empty State -->
+        <div id="wishlistEmptyState" class="text-center py-5" style="display: none;">
+          <i class="bi bi-heart fs-1 text-muted mb-3 d-block opacity-50"></i>
+          <h5 class="fw-bold">Your wishlist is empty</h5>
+          <p class="text-muted small mb-4">Click the heart icon on any timepiece to save it here for later.</p>
+          <a href="watch.html" class="btn-luxury-primary btn-luxury-sm">Browse Collection</a>
+        </div>
+
+        <!-- Wishlist Items List Container -->
+        <div id="wishlistItemsList"></div>
+      </div>
+
+      <div id="wishlistFooterContainer" class="cart-footer">
+        <button
+          type="button"
+          id="addAllWishlistToCartBtn"
+          class="btn-luxury-primary w-100 py-3 mb-2 fs-6"
+        >
+          <i class="bi bi-bag-plus-fill me-1"></i> Add All Items to Cart
+        </button>
+        <button
+          type="button"
+          id="clearWishlistBtn"
+          class="btn btn-outline-secondary w-100 rounded-pill py-2 small fw-semibold"
+        >
+          Clear Wishlist
         </button>
       </div>
     </div>

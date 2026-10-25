@@ -311,6 +311,11 @@
       el.style.display = wishlist.length > 0 ? 'flex' : 'none';
     });
 
+    const headerCount = document.getElementById('wishlistHeaderCount');
+    if (headerCount) {
+      headerCount.textContent = wishlist.length;
+    }
+
     document.querySelectorAll('[data-wishlist-id]').forEach(btn => {
       const id = btn.getAttribute('data-wishlist-id');
       if (wishlist.includes(id)) {
@@ -328,6 +333,91 @@
           icon.classList.add('bi-heart');
         }
       }
+    });
+
+    // Render Wishlist Offcanvas Drawer
+    const listEl = document.getElementById('wishlistItemsList');
+    const emptyEl = document.getElementById('wishlistEmptyState');
+    const footerEl = document.getElementById('wishlistFooterContainer');
+
+    if (!listEl) return;
+
+    if (wishlist.length === 0) {
+      listEl.innerHTML = '';
+      if (emptyEl) emptyEl.style.display = 'block';
+      if (footerEl) footerEl.style.display = 'none';
+      return;
+    }
+
+    if (emptyEl) emptyEl.style.display = 'none';
+    if (footerEl) footerEl.style.display = 'block';
+
+    listEl.innerHTML = '';
+    wishlist.forEach(id => {
+      const prod = productDatabase[id] || {
+        id: id,
+        title: 'XTRA Timepiece',
+        price: 399,
+        image: 'watch/watch-1.png',
+        category: 'Luxury Edition',
+        finish: 'Titanium Edition'
+      };
+
+      const card = document.createElement('div');
+      card.className = 'wishlist-item-card';
+      card.innerHTML = `
+        <img src="${fixImagePath(prod.image)}" alt="${prod.title}" class="wishlist-item-img">
+        <div class="wishlist-item-details">
+          <div class="wishlist-item-title">${prod.title}</div>
+          <div class="small text-muted mb-2"><i class="bi bi-tag me-1"></i>${prod.category || 'Luxury Smartwatch'}</div>
+          <div class="d-flex align-items-center justify-content-between">
+            <span class="wishlist-item-price">$${prod.price}</span>
+            <button type="button" class="btn btn-dark btn-sm rounded-pill px-3 py-1 small fw-semibold btn-wishlist-move" data-id="${prod.id}">
+              <i class="bi bi-bag-plus me-1"></i> Move to Cart
+            </button>
+          </div>
+        </div>
+        <button type="button" class="cart-item-remove btn-wishlist-remove ms-2" data-id="${prod.id}" title="Remove from wishlist">
+          <i class="bi bi-trash3"></i>
+        </button>
+      `;
+      listEl.appendChild(card);
+    });
+
+    // Event listeners for Move to Cart & Remove in Wishlist Drawer
+    listEl.querySelectorAll('.btn-wishlist-move').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-id');
+        const prod = productDatabase[id] || { id: id, title: 'XTRA Timepiece', price: 399, image: 'watch/watch-1.png', finish: 'Titanium Edition' };
+
+        addToCart({
+          id: prod.id,
+          title: prod.title,
+          price: prod.price,
+          image: prod.image,
+          finish: prod.finish || 'Titanium Edition',
+          qty: 1
+        });
+
+        let wl = getWishlist();
+        wl = wl.filter(item => item !== id);
+        saveWishlist(wl);
+
+        const wlDrawerEl = document.getElementById('wishlistDrawer');
+        if (wlDrawerEl && window.bootstrap && window.bootstrap.Offcanvas) {
+          bootstrap.Offcanvas.getInstance(wlDrawerEl)?.hide();
+        }
+      });
+    });
+
+    listEl.querySelectorAll('.btn-wishlist-remove').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-id');
+        let wl = getWishlist();
+        wl = wl.filter(item => item !== id);
+        saveWishlist(wl);
+        showToast('Item removed from wishlist', 'info', 'bi-heart');
+      });
     });
   }
 
@@ -728,6 +818,41 @@
         e.preventDefault();
         showToast('Message sent! Our horology concierge will reply within 2 business hours.', 'success', 'bi-send-check-fill');
         contactForm.reset();
+      });
+    }
+
+    // 8b. Wishlist Drawer Global Actions
+    const addAllWishlistBtn = document.getElementById('addAllWishlistToCartBtn');
+    if (addAllWishlistBtn) {
+      addAllWishlistBtn.addEventListener('click', () => {
+        const wishlist = getWishlist();
+        if (wishlist.length === 0) return;
+        wishlist.forEach(id => {
+          const prod = productDatabase[id] || { id: id, title: 'XTRA Timepiece', price: 399, image: 'watch/watch-1.png', finish: 'Titanium Edition' };
+          addToCart({
+            id: prod.id,
+            title: prod.title,
+            price: prod.price,
+            image: prod.image,
+            finish: prod.finish || 'Titanium Edition',
+            qty: 1
+          });
+        });
+        saveWishlist([]);
+        showToast('All saved timepieces moved to your shopping cart!', 'success', 'bi-bag-check-fill');
+
+        const wlDrawerEl = document.getElementById('wishlistDrawer');
+        if (wlDrawerEl && window.bootstrap && window.bootstrap.Offcanvas) {
+          bootstrap.Offcanvas.getInstance(wlDrawerEl)?.hide();
+        }
+      });
+    }
+
+    const clearWishlistBtn = document.getElementById('clearWishlistBtn');
+    if (clearWishlistBtn) {
+      clearWishlistBtn.addEventListener('click', () => {
+        saveWishlist([]);
+        showToast('Wishlist cleared', 'info', 'bi-trash3');
       });
     }
 
