@@ -413,7 +413,47 @@ img {
   padding: 6px 14px;
 }
 
-/* Nav Action Buttons */
+/* Nav Action Buttons & Right CTA */
+.nav-cta-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 992px) {
+  .w-lg-auto {
+    width: auto !important;
+  }
+
+  .nav-cta-wrapper {
+    width: auto !important;
+    margin-top: 0 !important;
+    justify-content: flex-end !important;
+    flex-shrink: 0 !important;
+  }
+
+  .navbar-luxury .btn-luxury-dark,
+  .navbar-luxury .btn-luxury-primary,
+  .navbar-luxury .btn-luxury-sm {
+    width: auto !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .nav-cta-wrapper {
+    width: 100% !important;
+    margin-top: 1rem !important;
+    flex-direction: column !important;
+  }
+
+  .navbar-luxury .offcanvas-body .btn-luxury-dark,
+  .navbar-luxury .offcanvas-body .btn-luxury-primary {
+    width: 100% !important;
+  }
+}
+
 .nav-action-btn {
   width: 42px;
   height: 42px;
