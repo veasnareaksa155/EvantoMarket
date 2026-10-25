@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Chrono Series | XTRA Watch</title>
+    <link rel="icon" href="../image/download.jpg" />
+
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+  </head>
+  <body>
+    <!-- Top Announcement Bar -->
+    <header class="top-ticker-bar">
+      <div class="container">
+        <div class="row align-items-center text-center text-lg-start g-2">
+          <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-start gap-2">
+            <img
+              src="../image/download.jpg"
+              alt="Envanto Partner"
+              class="rounded-circle border border-success"
+              style="width: 28px; height: 28px; object-fit: cover;"
+            />
+            <span class="fw-bold text-uppercase tracking-wider text-light small">
+              Envanto <span class="text-success">Market</span> Verified
+            </span>
+            <span class="badge bg-success-subtle text-success py-1 px-2 rounded-pill small ms-1">Official</span>
+          </div>
+
+          <div class="col-12 col-lg-5 text-center">
+            <p class="m-0 small text-light">
+              <span class="badge bg-danger rounded-pill me-1">SPRING SALE</span>
+              Get 20% OFF with code
+              <a href="#" class="code-badge ms-1" data-copy-code="XTRA20" title="Click to copy promo code">
+                XTRA20 <i class="bi bi-copy ms-1 small"></i>
+              </a>
+              • Free Global Express Delivery
+            </p>
+          </div>
+
+          <div class="col-12 col-lg-3 text-center text-lg-end">
+            <a
+              href="https://themeforest.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline-light btn-sm rounded-pill px-3 py-1 small fw-semibold"
+            >
+              <i class="bi bi-download me-1"></i> Get XTRA Theme
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-luxury">
+      <div class="container">
+        <!-- Brand -->
+        <a href="../index.html" class="navbar-brand d-flex align-items-center gap-2">
+          <div class="brand-monogram">
+            <i class="bx bxs-watch"></i>
+          </div>
+          <div class="brand-text">
+            XTRA<span>Watch</span>
+          </div>
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links & Offcanvas Drawer for Mobile -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header border-bottom">
+            <div class="d-flex align-items-center gap-2">
+              <div class="brand-monogram" style="width: 36px; height: 36px; font-size: 1.2rem;">
+                <i class="bx bxs-watch"></i>
+              </div>
+              <span class="fw-bold fs-5">XTRA Watch</span>
+            </div>
+            <button
+              type="button"
+              class="btn-close shadow-none"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body align-items-center">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Collections
+                </a>
+                <ul class="dropdown-menu">
+                  <li><span class="dropdown-header">Watch Editions</span></li>
+                  <li>
+                    <a class="dropdown-item" href="bestseller.html">
+                      <span><i class="bi bi-star-fill text-warning me-2"></i> Bestseller Series</span>
+                      <span class="badge bg-warning text-dark rounded-pill small">Top Rated</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="classic.html">
+                      <span><i class="bi bi-gem text-primary me-2"></i> Classic Heritage</span>
+                      <span class="badge bg-secondary-subtle text-secondary rounded-pill small">Leather</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="modern.html">
+                      <span><i class="bi bi-cpu text-info me-2"></i> Modern Titanium</span>
+                      <span class="badge bg-info-subtle text-info rounded-pill small">AMOLED</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item active" href="sport.html">
+                      <span><i class="bi bi-speedometer2 text-danger me-2"></i> Sport Chrono</span>
+                      <span class="badge bg-danger-subtle text-danger rounded-pill small">50M 5ATM</span>
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider my-2" /></li>
+                  <li>
+                    <a class="dropdown-item" href="custom.html">
+                      <span><i class="bi bi-palette-fill text-success me-2"></i> Bespoke Customizer</span>
+                      <span class="badge bg-success rounded-pill small">Studio</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="watch.html" class="nav-link">All Watches</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Quick Find
+                </a>
+                <ul class="dropdown-menu">
+                  <li><span class="dropdown-header">Filter by Category</span></li>
+                  <li>
+                    <a class="dropdown-item active" href="sport.html">
+                      <span><i class="bi bi-water me-2 text-primary"></i> Sports & Divers</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="bestseller.html">
+                      <span><i class="bi bi-fire me-2 text-danger"></i> Trending Smartwatches</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="classic.html">
+                      <span><i class="bi bi-clock-history me-2 text-secondary"></i> Vintage Mechanical</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="custom.html">
+                      <span><i class="bi bi-pen-fill me-2 text-warning"></i> Laser Custom Engraved</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Support & Concierge</a>
+              </li>
+            </ul>
+
+            <!-- Right Nav Actions -->
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-end gap-2 mt-3 mt-lg-0">
+              <button
+                type="button"
+                class="nav-action-btn"
+                title="Wishlist"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#cartDrawer"
+                aria-label="Wishlist"
+              >
+                <i class="bi bi-heart"></i>
+                <span class="nav-action-badge wishlist-badge-count">1</span>
+              </button>
+
+              <button
+                type="button"
+                class="nav-action-btn"
+                title="Cart"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#cartDrawer"
+                aria-label="Cart"
+              >
+                <i class="bx bx-shopping-bag fs-5"></i>
+                <span class="nav-action-badge cart-badge-count">2</span>
+              </button>
+
+              <a
+                href="custom.html"
+                class="btn-luxury-dark btn-luxury-sm ms-lg-2 d-none d-sm-inline-flex"
+              >
+                <i class="bi bi-sliders me-1"></i> Build Custom
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <section class="bg-white border-bottom py-5">
+      <div class="container text-center">
+        <span class="badge-luxury badge-luxury-rose mb-2">ENDURANCE ATHLETICS</span>
+        <h1 class="display-5 fw-bold mb-2">Sports & Fitness Chronographs</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 620px;">
+          Tested to extreme limits. 50-meter 5ATM certified water resistance, multi-frequency satellite GPS, and 90+ professional sports telemetry modes.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3 Sports Feature Pillars -->
+    <section class="container py-4">
+      <div class="row g-4 text-center">
+        <div class="col-12 col-md-4">
+          <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
+            <i class="bi bi-droplet-half text-info fs-1 mb-2 d-block"></i>
+            <h5 class="fw-bold">5ATM Water Resistance</h5>
+            <p class="small text-muted mb-0">Certified under ISO 22810:2010 for open ocean swimming, triathlons, and torrential alpine rain.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
+            <i class="bi bi-compass-fill text-danger fs-1 mb-2 d-block"></i>
+            <h5 class="fw-bold">Dual-Band Multi-GPS</h5>
+            <p class="small text-muted mb-0">L1+L5 multi-satellite antennas pinpoint your route accurately under dense forest canopies and skyscraper canyons.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
+            <i class="bi bi-heart-pulse-fill text-warning fs-1 mb-2 d-block"></i>
+            <h5 class="fw-bold">BioTracker 4.0 PPG</h5>
+            <p class="small text-muted mb-0">Real-time target heart rate zones, SpO2 blood saturation monitoring, and recovery time analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Showcase Grid -->
+    <main class="container py-5">
+      <div class="row g-4 justify-content-center">
+        <!-- Item 1: Stealth Black Sports -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="product-card" data-product-card data-product-title="Stealth Black Sports" data-product-category="Sport Chrono">
+            <div class="product-media-wrapper">
+              <div class="product-badge-overlay">
+                <span class="badge-luxury badge-luxury-cyan">MIL-SPEC</span>
+              </div>
+              <div class="product-actions-bar">
+                <button
+                  type="button"
+                  class="action-btn-circle"
+                  data-wishlist-id="prod-4"
+                  data-wishlist-title="Stealth Black Sports"
+                  title="Wishlist"
+                  aria-label="Wishlist"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button
+                  type="button"
+                  class="action-btn-circle"
+                  data-quick-view="prod-4"
+                  title="Quick View"
+                  aria-label="Quick View"
+                >
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <img src="../watch/black-watch.png" alt="Stealth Black Sports" loading="lazy" />
+            </div>
+
+            <div class="product-body">
+              <div class="product-category-row">
+                <span class="product-category">DLC Black Carbon</span>
+                <div class="color-dots-group">
+                  <span class="color-dot-choice active" style="background: #0f172a;" data-color-name="Matte DLC Black" title="Matte DLC Black"></span>
+                  <span class="color-dot-choice" style="background: #475569;" data-color-name="Gunmetal Gray" title="Gunmetal Gray"></span>
+                </div>
+              </div>
+
+              <h3 class="product-title">
+                <a href="sport.html">Stealth Black Sports</a>
+              </h3>
+
+              <div class="rating-row">
+                <div class="rating-stars">
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                </div>
+                <span class="rating-count">(156 reviews)</span>
+              </div>
+
+              <div class="spec-chips">
+                <span class="spec-chip"><i class="bi bi-compass"></i> Dual-GPS</span>
+                <span class="spec-chip"><i class="bi bi-water"></i> 100M Dive</span>
+              </div>
+
+              <div class="product-footer-row">
+                <div class="product-price-box">
+                  <span class="price-original">$699</span>
+                  <span class="price-current">$599</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-add-cart-fast"
+                  data-add-cart
+                  data-product-id="prod-4"
+                  data-product-title="Stealth Black Sports"
+                  data-product-price="599"
+                  data-product-image="watch/black-watch.png"
+                  data-product-finish="Matte DLC Black"
+                >
+                  <i class="bi bi-bag-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Chrome Watch Pro (Ocean Edition) -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="product-card" data-product-card data-product-title="Chrome Watch Pro" data-product-category="Sport Chrono">
+            <div class="product-media-wrapper">
+              <div class="product-badge-overlay">
+                <span class="badge-luxury badge-luxury-rose">SALE -20%</span>
+              </div>
+              <div class="product-actions-bar">
+                <button
+                  type="button"
+                  class="action-btn-circle"
+                  data-wishlist-id="prod-1"
+                  data-wishlist-title="Chrome Watch Pro"
+                  title="Wishlist"
+                  aria-label="Wishlist"
+                >
+                  <i class="bi bi-heart"></i>
+                </button>
+                <button
+                  type="button"
+                  class="action-btn-circle"
+                  data-quick-view="prod-1"
+                  title="Quick View"
+                  aria-label="Quick View"
+                >
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <img src="../watch/watch-1.png" alt="Chrome Watch Pro" loading="lazy" />
+            </div>
+
+            <div class="product-body">
+              <div class="product-category-row">
+                <span class="product-category">Titanium Grade 5</span>
+                <div class="color-dots-group">
+                  <span class="color-dot-choice active" style="background: #0ea5e9;" data-color-name="Cyan Ocean" title="Cyan Ocean"></span>
+                  <span class="color-dot-choice" style="background: #0f172a;" data-color-name="Obsidian Black" title="Obsidian Black"></span>
+                </div>
+              </div>
+
+              <h3 class="product-title">
+                <a href="modern.html">Chrome Watch Pro</a>
+              </h3>
+
+              <div class="rating-row">
+                <div class="rating-stars">
+                  <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                </div>
+                <span class="rating-count">(94 reviews)</span>
+              </div>
+
+              <div class="spec-chips">
+                <span class="spec-chip"><i class="bi bi-display"></i> 1.78" AMOLED Retina</span>
+                <span class="spec-chip"><i class="bi bi-battery-charging"></i> 7-Day Battery</span>
+              </div>
+
+              <div class="product-footer-row">
+                <div class="product-price-box">
+                  <span class="price-original">$499</span>
+                  <span class="price-current">$399</span>
+                </div>
+                <button
+                  type="button"
+                  class="btn-add-cart-fast"
+                  data-add-cart
+                  data-product-id="prod-1"
+                  data-product-title="Chrome Watch Pro"
+                  data-product-price="399"
+                  data-product-image="watch/watch-1.png"
+                  data-product-finish="Cyan Ocean"
+                >
+                  <i class="bi bi-bag-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-luxury">
+      <div class="container">
+        <div class="row g-5 mb-5">
+          <div class="col-12 col-lg-4">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <div class="brand-monogram" style="width: 38px; height: 38px; font-size: 1.2rem;">
+                <i class="bx bxs-watch"></i>
+              </div>
+              <h5 class="m-0 fw-bold text-white fs-4">XTRA<span class="text-primary">Watch</span></h5>
+            </div>
+            <p class="small text-muted mb-4" style="max-width: 340px;">
+              Pioneering wearable horology where aerospace-grade metallurgy unites with continuous biometric health telemetry and contemporary luxury aesthetics.
+            </p>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h6 class="footer-title">Collections</h6>
+            <ul class="footer-links">
+              <li><a href="bestseller.html">Bestsellers</a></li>
+              <li><a href="modern.html">Modern Titanium</a></li>
+              <li><a href="classic.html">Classic Heritage</a></li>
+              <li><a href="sport.html">Sport Chrono</a></li>
+              <li><a href="custom.html">Bespoke Custom</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h6 class="footer-title">Customer Care</h6>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact Concierge</a></li>
+              <li><a href="contact.html">Order Tracking</a></li>
+              <li><a href="contact.html">Warranty Policy</a></li>
+              <li><a href="contact.html">Returns & Exchanges</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <h6 class="footer-title">Join The VIP Horology Club</h6>
+            <form class="newsletter-form">
+              <div class="newsletter-input-group">
+                <input
+                  type="email"
+                  class="newsletter-input"
+                  placeholder="Enter your VIP email address..."
+                  required
+                />
+                <button type="submit" class="btn-luxury-primary btn-luxury-sm text-nowrap">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="pt-4 border-top border-secondary border-opacity-25 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 footer-bottom-row">
+          <p class="small text-muted mb-0">
+            &copy; 2026 XTRA Watch & Envanto Market. All Rights Reserved.
+          </p>
+          <div class="d-flex align-items-center gap-3 small">
+            <span><i class="bi bi-credit-card me-1 text-primary"></i> Apple Pay</span>
+            <span>Google Pay</span>
+            <span>Visa</span>
+            <span>Mastercard</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Slide-Over Cart Drawer -->
+    <div class="offcanvas offcanvas-end cart-offcanvas" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel">
+      <div class="cart-header">
+        <h5 class="fw-bold mb-0 d-flex align-items-center gap-2" id="cartDrawerLabel">
+          <i class="bx bx-shopping-bag text-primary fs-4"></i>
+          Your Shopping Cart
+        </h5>
+        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="cart-body">
+        <div id="cartShippingBar" class="cart-free-shipping-bar">
+          <div id="shippingProgressText" class="small text-muted mb-1">
+            Add <strong>$45</strong> more for <strong>Free Express Shipping</strong>
+          </div>
+          <div class="shipping-progress-track">
+            <div id="shippingProgressFill" class="shipping-progress-fill" style="width: 70%;"></div>
+          </div>
+        </div>
+
+        <div id="cartEmptyState" class="text-center py-5" style="display: none;">
+          <i class="bx bx-cart-alt fs-1 text-muted mb-3 d-block opacity-50"></i>
+          <h5 class="fw-bold">Your cart is empty</h5>
+          <p class="text-muted small mb-4">Discover our handcrafted titanium smartwatches.</p>
+          <a href="watch.html" class="btn-luxury-primary btn-luxury-sm">Browse Watches</a>
+        </div>
+
+        <div id="cartItemsList"></div>
+      </div>
+
+      <div id="cartFooterContainer" class="cart-footer">
+        <div class="input-group mb-3">
+          <input type="text" id="couponCodeInput" class="form-control rounded-start-pill ps-3 small" placeholder="Promo code (Try XTRA20)" />
+          <button class="btn btn-outline-dark rounded-end-pill px-3 fw-bold small" type="button" id="applyCouponBtn">Apply</button>
+        </div>
+
+        <div class="cart-total-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotalAmount" class="fw-bold text-dark">$798</span>
+        </div>
+
+        <div id="cartDiscountRow" class="cart-total-row text-success" style="display: none;">
+          <span>Promo Discount</span>
+          <span id="cartDiscountAmount" class="fw-bold">-$0</span>
+        </div>
+
+        <div class="cart-total-row">
+          <span>Estimated Taxes & Shipping</span>
+          <span class="text-success fw-semibold">FREE</span>
+        </div>
+
+        <div class="cart-total-row pt-2 border-top mt-2">
+          <span class="fs-5 fw-bold text-dark">Total</span>
+          <span id="cartGrandTotalAmount" class="cart-grand-total">$798</span>
+        </div>
+
+        <button type="button" id="proceedCheckoutBtn" class="btn-luxury-primary w-100 py-3 mt-3 fs-6">
+          <i class="bi bi-shield-check"></i> Proceed to Secure Checkout
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal fade modal-luxury" id="quickViewModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0 pb-0">
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 p-md-5 pt-0">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-md-6">
+                <div class="modal-luxury-media rounded-4">
+                  <img id="quickViewImg" src="../watch/black-watch.png" alt="Quick View" class="img-fluid" />
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <span id="quickViewCategory" class="badge-luxury badge-luxury-cyan mb-2">SPORTS CHRONO</span>
+                <h3 id="quickViewTitle" class="fw-bold mb-2">Stealth Black Sports</h3>
+                <div class="rating-row mb-3">
+                  <div class="rating-stars">
+                    <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+                  </div>
+                  <span class="rating-count">(156 verified reviews)</span>
+                </div>
+                <div class="fs-3 fw-bold text-dark mb-3" id="quickViewPrice">$599</div>
+                <p id="quickViewDesc" class="text-muted small mb-4"></p>
+                <div class="mb-3">
+                  <label class="fw-bold small text-dark d-block mb-2">Select Watch Finish:</label>
+                  <div class="d-flex gap-2">
+                    <label class="btn btn-outline-dark btn-sm rounded-pill px-3 active">
+                      <input type="radio" name="quickViewFinish" value="Matte DLC Black" checked class="d-none"> Matte Black
+                    </label>
+                    <label class="btn btn-outline-dark btn-sm rounded-pill px-3">
+                      <input type="radio" name="quickViewFinish" value="Gunmetal Gray" class="d-none"> Gunmetal
+                    </label>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <h6 class="fw-bold small text-dark mb-2">Key Specifications:</h6>
+                  <ul id="quickViewSpecs" class="list-unstyled small text-muted mb-0"></ul>
+                </div>
+                <div class="d-flex gap-2">
+                  <input type="number" id="quickViewQty" class="form-control rounded-pill text-center fw-bold" style="width: 70px;" value="1" min="1" max="10" />
+                  <button type="button" id="quickViewAddBtn" class="btn-luxury-primary flex-grow-1">
+                    <i class="bi bi-bag-plus"></i> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal fade modal-luxury" id="checkoutModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold"><i class="bi bi-shield-lock-fill text-success me-2"></i>Express Secure Checkout</h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <form id="checkoutOrderForm">
+              <div class="mb-3">
+                <label class="form-label small fw-bold text-dark">Full Name</label>
+                <input type="text" class="form-control rounded-pill px-3" required placeholder="John Doe" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label small fw-bold text-dark">Email Address</label>
+                <input type="email" class="form-control rounded-pill px-3" required placeholder="john@example.com" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label small fw-bold text-dark">Shipping Destination</label>
+                <input type="text" class="form-control rounded-pill px-3" required placeholder="123 Luxury Ave, Beverly Hills, CA 90210" />
+              </div>
+              <button type="submit" class="btn-luxury-primary w-100 py-3">
+                <i class="bi bi-lock-fill me-1"></i> Complete Order
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button type="button" id="backToTopBtn" class="back-to-top-btn" title="Back to top" aria-label="Back to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../js/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
